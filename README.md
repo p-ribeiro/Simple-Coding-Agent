@@ -15,16 +15,22 @@ A minimal coding agent that uses a large language model (LLM) together with an E
 - Dependencies listed in pyproject.toml (e2b-code-interpreter, openai, python-dotenv)
 
 ## Setup
-1. Create a virtual environment and install dependencies:
-   - python -m venv .venv
-   - source .venv/bin/activate
-   - pip install -e .
+1. Create a `.env` file at the project root with:
+    - OPENAI_API_KEY=your_openai_key
+    - E2B_API_KEY=your_e2b_key
 
-2. Create a `.env` file at the project root with:
-   - OPENAI_API_KEY=your_openai_key
-   - E2B_API_KEY=your_e2b_key
-
-3. Verify keys are loaded when running the example.
+2. Using `uv`:
+    ```bash
+    $ uv sync
+    $ uv run main.py
+    ```
+3. Using python venv module:
+    ```bash
+    $ python -m venv .venv
+    $ source .venv/bin/activate
+    $ pip install .
+    $ python main.py
+    ```
 
 ## Running the example
 Run the main script:
